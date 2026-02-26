@@ -1,6 +1,6 @@
 ---
 title: "PS270 Final Project"
-author: "Your Name Here"
+author: "Grace Williams"
 description: "My final project"
 output:
   distill::distill_article:
@@ -11,4 +11,15 @@ output:
 
 ## Project thoughts
 
-I am interested in exploring data related to...
+I am interested in exploring data related to childcare.
+
+## Tentative research question
+
+My research question is: How does gender relate to U.S. adults’ intentions or feelings about having children among those who have never been parents? I want to find out if women and men differ in how they describe their thoughts about having children. My hypothesis is that women are more likely than men to say that they “never wanted to have children” or “weren’t sure” compared to men, reflecting social and behavioral patterns in intention of raising kids. The key independent variable is F_GENDER, which indicates whether the respondent self-reported as a woman, a man, in some other way, or refused to answer. The dependent variable is the survey question (KIDSEVER_W147): “Which of the following best describes your thoughts on having children?” with response options: "There was a time when you wanted to have children," "You never wanted to have children," "You weren’t sure whether or not you wanted to have children," and "Refused." My hypothesis would be supported if the responses differ significantly by gender, specifically if women were more likely to respond with "You never wanted to have children" and "You weren’t sure whether or not you wanted to have children." The hypothesis would be disproved if there is no difference by gender, or if men are more likely than women to report they never wanted children or were unsure.
+
+## Data
+```{r}
+library(tidyverse)
+panel_data <- read_csv("ATP W147.csv")
+panel_data
+```
